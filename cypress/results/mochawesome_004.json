@@ -1,0 +1,125 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-11-10T04:42:42.127Z",
+    "end": "2023-11-10T04:42:42.416Z",
+    "duration": 289,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "9e72a9a5-ed19-4a50-8c99-45d0bf117b5b",
+      "title": "",
+      "fullFile": "cypress\\e2e\\TestCase\\手动调计算接口.cy.js",
+      "file": "cypress\\e2e\\TestCase\\手动调计算接口.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e84bae15-3a40-4b50-bdd3-17056c7571c5",
+          "title": "接口依赖测试",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "测试查看标签的接口",
+              "fullTitle": "接口依赖测试 测试查看标签的接口",
+              "timedOut": null,
+              "duration": 174,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//cy.wrap(localStorage.getItem())\ncy.request({\n  method: 'POST',\n  url: 'http://wolf.test.datatist.cn/analyzer/analyzer/account/login.do',\n  headers: {\n    \"Project-Id\": \"Jevf4ghaKT091r5E\",\n    \"Content-Type\": \"application/json\"\n  },\n  failOnStatusCode: false,\n  body: {\n    \"password\": \"abcd1234\",\n    \"rememberMe\": true,\n    \"scope\": \"\",\n    \"username\": \"analyzer@datatist.com\"\n  }\n}).then(response => {});",
+              "err": {},
+              "uuid": "f9556a66-b8cf-4812-9766-9b9503f7afd6",
+              "parentUUID": "e84bae15-3a40-4b50-bdd3-17056c7571c5",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "调用手动计算接口",
+              "fullTitle": "接口依赖测试 调用手动计算接口",
+              "timedOut": null,
+              "duration": 62,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.window().then(window => {\n  cy.request({\n    method: 'POST',\n    url: 'http://wolf.test.datatist.cn/analyzer/tag/engine/calculateTaskManuallyByBatch.do',\n    headers: {\n      \"Project-Id\": \"Jevf4ghaKT091r5E\",\n      \"Content-Type\": \"application/json\",\n      \"Authorization\": window.localStorage.getItem('jwt')\n    },\n    body: {\n      \"taskId\": \"11528466840224\",\n      \"labelId\": 892\n    }\n  }).its('body').as(\"resp\").then(function () {\n    //expect(this.resp.code).to.eq(0);\n  });\n});",
+              "err": {},
+              "uuid": "420aea5e-f06a-4df8-a0cf-288a257b8bd9",
+              "parentUUID": "e84bae15-3a40-4b50-bdd3-17056c7571c5",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "f9556a66-b8cf-4812-9766-9b9503f7afd6",
+            "420aea5e-f06a-4df8-a0cf-288a257b8bd9"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 236,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "xml": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

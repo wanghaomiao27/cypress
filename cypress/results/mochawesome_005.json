@@ -1,0 +1,176 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 1,
+    "pending": 0,
+    "failures": 3,
+    "start": "2023-11-10T04:42:45.302Z",
+    "end": "2023-11-10T04:43:44.240Z",
+    "duration": 58938,
+    "testsRegistered": 4,
+    "passPercent": 25,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "50aebcb9-494b-46a0-bf5e-20e8766a76c2",
+      "title": "",
+      "fullFile": "cypress\\e2e\\TestCase\\登录场景.cy.js",
+      "file": "cypress\\e2e\\TestCase\\登录场景.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "f2f9d465-a77b-4515-bbce-c65a7e7ea85d",
+          "title": "登录",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "登录成功!",
+              "fullTitle": "登录 登录成功!",
+              "timedOut": null,
+              "duration": 3960,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.login(user.username, user.password);",
+              "err": {},
+              "uuid": "ce710db5-a166-4c22-a6cb-3549b4b2a0af",
+              "parentUUID": "f2f9d465-a77b-4515-bbce-c65a7e7ea85d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "错误的用户名!",
+              "fullTitle": "登录 错误的用户名!",
+              "timedOut": null,
+              "duration": 17145,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.login(user.username, user.password);",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 15000ms: expected 'http://wolf.test.datatist.cn/aimarketer/login' to include '/aimarketer/usercenter/productcenter'",
+                "estack": "AssertionError: Timed out retrying after 15000ms: expected 'http://wolf.test.datatist.cn/aimarketer/login' to include '/aimarketer/usercenter/productcenter'\n    at LoginPage.isTargetPage (webpack://cypressdemo/./cypress/e2e/pageObject/login.js:16:17)\n    at Context.eval (webpack://cypressdemo/./cypress/support/commands.js:46:13)",
+                "diff": null
+              },
+              "uuid": "4da7b5eb-ac53-4447-9041-61284ab28e5e",
+              "parentUUID": "f2f9d465-a77b-4515-bbce-c65a7e7ea85d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "错误的密码!",
+              "fullTitle": "登录 错误的密码!",
+              "timedOut": null,
+              "duration": 17625,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.login(user.username, user.password);",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 15000ms: expected 'http://wolf.test.datatist.cn/aimarketer/login' to include '/aimarketer/usercenter/productcenter'",
+                "estack": "AssertionError: Timed out retrying after 15000ms: expected 'http://wolf.test.datatist.cn/aimarketer/login' to include '/aimarketer/usercenter/productcenter'\n    at LoginPage.isTargetPage (webpack://cypressdemo/./cypress/e2e/pageObject/login.js:16:17)\n    at Context.eval (webpack://cypressdemo/./cypress/support/commands.js:46:13)",
+                "diff": null
+              },
+              "uuid": "cfe61ffc-11c5-425d-981e-d489dd388194",
+              "parentUUID": "f2f9d465-a77b-4515-bbce-c65a7e7ea85d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "错误的用户名和密码!",
+              "fullTitle": "登录 错误的用户名和密码!",
+              "timedOut": null,
+              "duration": 17454,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.login(user.username, user.password);",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 15000ms: expected 'http://wolf.test.datatist.cn/aimarketer/login' to include '/aimarketer/usercenter/productcenter'",
+                "estack": "AssertionError: Timed out retrying after 15000ms: expected 'http://wolf.test.datatist.cn/aimarketer/login' to include '/aimarketer/usercenter/productcenter'\n    at LoginPage.isTargetPage (webpack://cypressdemo/./cypress/e2e/pageObject/login.js:16:17)\n    at Context.eval (webpack://cypressdemo/./cypress/support/commands.js:46:13)",
+                "diff": null
+              },
+              "uuid": "513c06d3-aa22-436b-b3c9-8d1580686195",
+              "parentUUID": "f2f9d465-a77b-4515-bbce-c65a7e7ea85d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ce710db5-a166-4c22-a6cb-3549b4b2a0af"
+          ],
+          "failures": [
+            "4da7b5eb-ac53-4447-9041-61284ab28e5e",
+            "cfe61ffc-11c5-425d-981e-d489dd388194",
+            "513c06d3-aa22-436b-b3c9-8d1580686195"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 56184,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "xml": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

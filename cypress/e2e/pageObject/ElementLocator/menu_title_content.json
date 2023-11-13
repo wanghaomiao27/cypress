@@ -1,0 +1,5 @@
+{
+  "MenuTitleContentPage": {
+    "menuTitleClassLocator": ".ant-menu-title-content"
+  }
+}

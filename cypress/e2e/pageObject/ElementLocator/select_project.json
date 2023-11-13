@@ -1,0 +1,7 @@
+{
+  "SelectProjectPage": {
+    "selectProjectLocator": ".ant-select-selection-item",
+    "enterProductBtnLocator": ".ant-btn > span",
+    "enterProjectNameLocator": "#rc_select_0"
+  }
+}

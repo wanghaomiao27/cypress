@@ -1,0 +1,7 @@
+{
+  "LoginPage": {
+    "userNameLocator": "#login_username",
+    "passWordLocator": "#login_password",
+    "submitLocator": "button[type=button]"
+  }
+}
